@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 }) 
 
 const paintCard = async ()=>{
-    const respuesta = await fetch('../js/productos.json');
+    const respuesta = await fetch('js/productos.json');
     const data = await respuesta.json();
     console.log(data)
     data.forEach ((producto)=>{
