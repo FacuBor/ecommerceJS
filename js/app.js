@@ -161,8 +161,8 @@ function submitPedido(e){
             toastify ()
             console.log('Submitted Form')
         },3000,);
+        carritoArray = [];
     }
-    carritoArray = [];
     mostrarCarrito()
     saveLocalS
 }
