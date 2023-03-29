@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./js/app.js">
     <link rel="shortcut icon" href="./img/icono.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Shoes</title>
 </head>
 <body class="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
@@ -33,7 +34,7 @@
                             <i class='bx bx-x' id="closed-cart" ></i>
                             <!-- btn buy -->
                             <div class="text-center">
-                                <button id="buttonBuy" class="btn btn-outline-success">Confirm Buy</button>
+                                <button id="buttonBuy" class="btn btn-outline-success mb-1">Confirm Buy</button>
                             </div>
                         </div>
                         <!-- nav Toggler -->
@@ -49,7 +50,7 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link fs-6" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link fs-6" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link fs-6" href="#">Contact</a>
@@ -78,22 +79,22 @@
                 </div>
                 <div class="carousel-inner ">
                     <div class="carousel-item active">
-                    <img src="./img/img-carousel-1.jpg" class="d-block w-100 img-carousel" alt="...">
+                    <img src="./img/img-carrousel-1.jpg" class="d-block w-100 img-carousel" alt="...">
+                    </div>
+                    <div class="carousel-item ">
+                    <img src="./img/img-carrousel-2.jpg" class="d-block w-100 img-carousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./img/img-carousel-2.jpg" class="d-block w-100 img-carousel" alt="...">
+                    <img src="./img/img-carrousel-3.jpg" class="d-block w-100 img-carousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./img/img-carousel-3.jpg" class="d-block w-100 img-carousel" alt="...">
+                    <img src="./img/img-carrousel-4.jpg" class="d-block w-100 img-carousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./img/image-10.jpg" class="d-block w-100 img-carousel" alt="...">
+                    <img src="./img/img-carrousel-5.jpg" class="d-block w-100 img-carousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="./img/image-5.jpg" class="d-block w-100 img-carousel" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                    <img src="./img/image-14.jpg" class="d-block w-100 img-carousel" alt="...">
+                    <img src="./img/img-carrousel-6 .jpg" class="d-block w-100 img-carousel" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -118,32 +119,89 @@
     <!-- modal After Buy -->
     <div class="modal-2-container d-flex  justify-content-center align-items-center m-0">
         <div class="modal-2-buy modal-2-close d-flex flex-column align-items-center justify-content-start m-0 ">
-            <div class="m-0 divImgX d-flex flex-row align-items-center justify-content-center text-center mt-2">
-                <p class="close-icon-modal m-0">X</p>
+            <div class="m-0 divImgX d-flex flex-row align-items-center justify-content-center text-center mt-4 mb-3">
                 <img class="img-modal-buy" src="./img/logoNav.png" alt="img">
                 <h3 class="modal-title-1"> Purchase Detail</h3>
             </div>
             <div class="modal-content-2 d-flex flex-column align-items-center mt-2 p-2">
-                <h4 class="modal-title-1">To complete</h4>
+                <!-- form -->
+                <form id="procesar-pago" method="POST"  class=" formBuy">
+                    <div class="form-group  d-flex flex-row justify-content-start mt-1">
+                        <label for="cliente" class=" col-form-label h2">Client:</label>
+                        <div class="">
+                            <input type="text" class="form-control ms-3 inputs" id="client"
+                                placeholder="Name" name="persona">
+                        </div>
+                    </div>
+                    <div class="form-group   d-flex flex-row justify-content-start mt-1 ">
+                        <label for="email" class=" col-form-label h2 me-1">Mail:</label>
+                        <div class="">
+                        <input type="text"  id="mail" class="form-control ms-4 inputs" placeholder="Mail"  name="email.id" id="email.id">
+                        </div>
+                    </div>
+
+                    <div id="carrito" class="form-group mt-2">
+                        <table class="table" id="lista-compra">
+                            <thead class="">
+                                <tr class="border border-success border-opacity-10">
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">SubTotal</th>
+                                </tr>
+
+                            </thead>
+                            <tbody class=" formTable">
+
+                            </tbody>
+                            <tr class="">
+                                <th colspan="8" scope="col" class="text-center ">
+                                    <p id="totalProceso" class="m-0"></p>
+                                </th>
+                                <!-- <th scope="col"></th> -->
+                            </tr>
+
+                        </table>
+                    </div>
+                    <!-- spinner -->
+                        <div class="divSpinner d-none d-flex flex-row justify-content-center align-items-center" id="spinner">
+                            <div class="sk-chase ">
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                                <div class="sk-chase-dot"></div>
+                            </div>
+                        </div>
+                    <div class="d-flex flex-row justify-content-evenly mb-4">
+                        <div class="">
+                            <a href="index.html" class="btn btn-warning btn-block">Keep buying</a>
+                        </div>
+                        <div class="">
+                            <input type="submit" class="btn btn-success btn-block" id="button" value="Send Buy" >
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
     <footer class="footerBox mt-4 d-flex flex-column justify-content-center align-items-center">
         <div>
             <h5 class=" title-footer">By Facundo Borssolasco</h5>
         </div>
         <div class="contact d-flex flex-row">
-            <a href="https://www.instagram.com/facuborssolasco/?hl=es-la" target="_blank" ><img class="logos me-4" src="./img/instagram-logoooo.png" ></a>
-            <a href="https://www.linkedin.com/in/facundo-borssolasco-715904259/" target="_blank" ><img class="logos" src="./img/linkedin-square-logo-36.png" ></a>
+            <a href="https://www.instagram.com/facuborssolasco/?hl=es-la" target="_blank" ><i class='bx bxl-instagram-alt logos'></i></a>
+            <a href="https://www.linkedin.com/in/facundo-borssolasco-715904259/" target="_blank" ><i class='bx bxl-linkedin-square logos' ></i></a>
         </div>
     </footer>
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./bootstrap-5.2.3/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/products.js"></script>
+    <!-- <script src="./js/products.js"></script> -->
     <script src="./js/app.js"></script>
     <script src="./js/cart.js"></script>
-    
 </body>
 </html>

@@ -5,7 +5,7 @@ const stockProducts = [
         precio:20000,
         cantidad:1,
         talle: 43,
-        imagen:"./img/img-carousel-1.jpg"
+        imagen:"./img/image-1.jpg"
     },
     {
         id:1,
@@ -13,7 +13,7 @@ const stockProducts = [
         precio:15000,
         cantidad:1,
         talle: 43,
-        imagen:"./img/img-carousel-2.jpg"
+        imagen:"./img/image-2.jpg"
     },
     {
         id:2,
@@ -21,7 +21,7 @@ const stockProducts = [
         precio:25000,
         cantidad:1,
         talle: 43,
-        imagen:"./img/img-carousel-3.jpg"
+        imagen:"./img/image-3.jpg"
     },
     {
         id:3,
@@ -118,8 +118,56 @@ const stockProducts = [
         cantidad:1,
         talle: 43,
         imagen:"./img/image-16.jpg"
-    },  
+    },
+    {
+        id:15,
+        nombre:"Nike Urban-light Blue",
+        precio:20000,
+        cantidad :1,
+        talle: 43,
+        imagen:"./img/image-17.jpg"
+    },
+    {
+        id:16,
+        nombre:"Nike Urban-light Blue",
+        precio:20000,
+        cantidad:1,
+        talle: 43,
+        imagen:"./img/image-18.jpg"
+    },
+    {
+        id:17,
+        nombre:"Nike Urban-light Blue",
+        precio:20000,
+        cantidad:1,
+        talle: 43,
+        imagen:"./img/image-19.jpg"
+    },
+    {
+        id:18,
+        nombre:"Nike Urban-light Blue",
+        precio:20000,
+        cantidad:1,
+        talle: 43,
+        imagen:"./img/image-20.jpg"
+    },
+    {
+        id:19,
+        nombre:"Nike Urban-light Blue",
+        precio:20000,
+        cantidad:1,
+        talle: 43,
+        imagen:"./img/image-21.jpg"
+    },
+    {
+        id:20,
+        nombre:"Nike Urban-light Blue",
+        precio:20000,
+        cantidad:1,
+        talle: 43,
+        imagen:"./img/image-22.jpg"
+    }
 ];
 
 //LS stock products
-localStorage.setItem('allProductos', JSON.stringify(stockProducts))
+/* localStorage.setItem('allProductosJS', JSON.stringify(stockProducts)) */

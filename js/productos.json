@@ -5,30 +5,30 @@
         "precio":20000,
         "cantidad":1,
         "talle": 43,
-        "imagen":"./img/img-carousel-1.jpg"
+        "imagen":"./img/image-1.jpg"
     },
     {
         "id":1,
         "nombre":"Nike Urban-brown",
         "precio":15000,
         "cantidad":1,
-        "talle": 43,
-        "imagen":"./img/img-carousel-2.jpg"
+        "talle": 40,
+        "imagen":"./img/image-2.jpg"
     },
     {
         "id":2,
         "nombre":"Nike Sport-red",
         "precio":25000,
         "cantidad":1,
-        "talle": 43,
-        "imagen":"./img/img-carousel-3.jpg"
+        "talle": 42,
+        "imagen":"./img/image-3.jpg"
     },
     {
         "id":3,
         "nombre":"Nike Sport-green",
         "precio":35000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 40,
         "imagen":"./img/image-4.jpg"
     },
     {
@@ -36,7 +36,7 @@
         "nombre":"Nike Urban-black",
         "precio":18000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 40,
         "imagen":"./img/image-5.jpg"
     },
     {
@@ -44,7 +44,7 @@
         "nombre":"Nike Urban-D",
         "precio":18000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 39,
         "imagen":"./img/image-6.jpg"
     },
     {
@@ -52,7 +52,7 @@
         "nombre":"Nike Sport-dark brown",
         "precio":20000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 44,
         "imagen":"./img/image-7.jpg"
     },
     {
@@ -60,15 +60,15 @@
         "nombre":"Nike Urban-White",
         "precio":15000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 45,
         "imagen":"./img/image-8.jpg"
     },
     {
         "id":8,
         "nombre":"Nike Urban-Golden",
         "precio":35000,
-        " cantidad":1,
-        "talle": 43,
+        "cantidad":1,
+        "talle": 41,
         "imagen":"./img/image-9.jpg"
     },
     {
@@ -84,7 +84,7 @@
         "nombre":"Nike Urban-grey",
         "precio":22000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 40,
         "imagen":"./img/image-11.jpg"
     },
     {
@@ -92,7 +92,7 @@
         "nombre":"Nike Urban-White 2",
         "precio":15000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 39,
         "imagen":"./img/image-12.jpg"
     },
     {
@@ -100,7 +100,7 @@
         "nombre":"Nike Sport-Urban",
         "precio":25000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 39,
         "imagen":"./img/image-14.jpg"
     },
     {
@@ -108,7 +108,7 @@
         "nombre":"Nike Sport-D1",
         "precio":18000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 41,
         "imagen":"./img/image-15.jpg"
     },
     {
@@ -116,8 +116,56 @@
         "nombre":"Nike Urban-light Blue",
         "precio":20000,
         "cantidad":1,
-        "talle": 43,
+        "talle": 42,
         "imagen":"./img/image-16.jpg"
-    } 
+    },
+    {
+        "id":15,
+        "nombre":"Nike Urban-orange",
+        "precio":25000,
+        "cantidad":1,
+        "talle": 42,
+        "imagen":"./img/image-17.jpg"
+    },
+    {
+        "id":16,
+        "nombre":"Nike Urban-Mix",
+        "precio":28000,
+        "cantidad":1,
+        "talle": 41,
+        "imagen":"./img/image-18.jpg"
+    },
+    {
+        "id":17,
+        "nombre":"Nike Sport-Pink",
+        "precio":26000,
+        "cantidad":1,
+        "talle": 44,
+        "imagen":"./img/image-19.jpg"
+    },
+    {
+        "id":18,
+        "nombre":"Nike Sport-urban",
+        "precio":24000,
+        "cantidad":1,
+        "talle": 43,
+        "imagen":"./img/image-20.jpg"
+    },
+    {
+        "id":19,
+        "nombre":"Nike Urban fem",
+        "precio":27000,
+        "cantidad":1,
+        "talle": 40,
+        "imagen":"./img/image-21.jpg"
+    },
+    {
+        "id":20,
+        "nombre":"Nike Urban-boot",
+        "precio":32000,
+        "cantidad":1,
+        "talle": 41,
+        "imagen":"./img/image-22.jpg"
+    }
 ]
 

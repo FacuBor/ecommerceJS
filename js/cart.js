@@ -11,7 +11,7 @@ cartIcon.onclick = () => {
 cartClosed.onclick = () => {
     cart.classList.remove('active')
 }
-//paint cart
+//paint products cart
 const mostrarCarrito = () => {
     if(cartContent){
     cartContent.innerHTML= '';
@@ -28,14 +28,14 @@ const mostrarCarrito = () => {
                                 <div class="cart-producto-title text-start">${producto.nombre}</div>
                                 <div class="cart-producto-price text-start">$${producto.precio}</div>
                                 <div class="resta-suma d-flex flex-row align-items-center justify-content-start">
-                                    <p class="text-start m-0">Cantidad:</p>
+                                    <p class="text-start cart-producto-cantidad m-0">Cantidad:</p>
                                     <div class="resta-suma-cartItem ms-4 d-flex flex-row align-items-center justify-content-evenly">
                                         <span class="restaSpan fs-5"> - </span>
                                         ${producto.cantidad}
                                         <span class="sumaSpan fs-5"> + </span>
                                     </div>
                                 </div>
-                                <p class="text-start text-success m-0">Total: ${producto.cantidad * producto.precio}</p>
+                                <p class="text-start text-success cart-producto-total m-0">Total: ${producto.cantidad * producto.precio}</p>
                             </div>
                             <i onclick="deleteItemCart(${producto.id})" class="bx bx-x btnDeleteItem"></i>
                         </div>
@@ -48,14 +48,12 @@ const mostrarCarrito = () => {
                 producto.cantidad --;
             }
             mostrarCarrito()
-            saveLocalS()
         });
         //sumar span
         let sumar = cartItem.querySelector('.sumaSpan')
         sumar.addEventListener('click', ()=>{
             producto.cantidad ++;
             mostrarCarrito()
-            saveLocalS()
         }) 
         })
     }
@@ -63,7 +61,7 @@ const mostrarCarrito = () => {
         const total = carritoArray.reduce((acc, el)=> acc + el.precio * el.cantidad, 0)
         let totalCompra = document.createElement('div');
         totalCompra.className = ('cart-total');
-        totalCompra.innerHTML = `<h6>Compra Total $${total}</h6>`;
+        totalCompra.innerHTML = `<h6 class= "total-compra-suma">Compra Total $${total}</h6>`;
         cartContent.append(totalCompra);
         //empty cart
         if(carritoArray.length === 0){
@@ -72,7 +70,6 @@ const mostrarCarrito = () => {
         } else{
             console.log('Productos en carrito',carritoArray.length)
         }
-        
     saveLocalS()
 }
 //detele item cart
@@ -81,5 +78,4 @@ function deleteItemCart(id){
     carritoArray = carritoArray.filter((element)=> element.id !== itemCart)
     mostrarCarrito()
     spanQuantity()
-    saveLocalS()
 }
